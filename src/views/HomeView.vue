@@ -5,6 +5,9 @@
     <div class="main-wrapper">
       <introduction-text />
       <waves />
+      <offers class="add-padding" />
+      <skills class="add-padding" />
+      <reviews class="add-padding" />
       <footer-component />
     </div>
   </div>
@@ -15,6 +18,9 @@ import FooterComponent from "../components/FooterComponent.vue";
 import Waves from "../components/WavesComponent.vue";
 import MousePointer from "../components/MousePointerComponent.vue";
 import IntroductionText from "../components/IntroductionTextComponent.vue";
+import Skills from "../components/SkillsComponent.vue";
+import Offers from "../components/OffersComponent.vue";
+import Reviews from "../components/ReviewsComponent.vue";
 
 export default {
   name: "HomeView",
@@ -23,9 +29,9 @@ export default {
     MousePointer,
     Waves,
     IntroductionText,
-  },
-  mounted() {
-    document.title = "Maroš Bednár";
+    Skills,
+    Offers,
+    Reviews,
   },
 };
 </script>
@@ -41,5 +47,9 @@ export default {
   padding-top: 100px;
   text-align: left;
   margin-bottom: 300px;
+}
+
+.add-padding {
+  padding: 0 50px;
 }
 </style>

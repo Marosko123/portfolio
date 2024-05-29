@@ -1,5 +1,6 @@
 <template>
   <div class="glitching-text">
+    <span v-if="icon">{{ icon }}</span>
     <div class="text" :style="getStyle()">{{ value }}</div>
   </div>
 </template>
@@ -10,15 +11,16 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "GlitchingTextComponent",
-  components: {},
-  mixins: [],
-  emits: [],
   data: () => ({
     interval: null,
     iteration: 0,
     element: null,
   }),
   props: {
+    icon: {
+      type: String,
+      default: "",
+    },
     value: {
       type: String,
       required: true,
@@ -50,7 +52,7 @@ export default defineComponent({
   watch: {},
   methods: {
     bind() {
-      document.querySelectorAll(".text").forEach((element) => {
+      document.querySelectorAll(".text").forEach(element => {
         if (element.innerHTML === this.value) {
           this.element = element;
         }
@@ -89,7 +91,7 @@ export default defineComponent({
         clearInterval(this.interval);
       }
 
-      this.iteration += 0.25;
+      this.iteration += 0.5;
     },
     getStyle() {
       return {
@@ -107,8 +109,17 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.glitching-text {
+  display: flex;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 700;
+  color: gold;
+  user-select: none;
+  pointer-events: none;
+  width: fit-content;
+}
+
 .text {
-  line-height: 1.1em;
   padding: 0rem 10px;
   border-radius: clamp(0.4rem, 0.75vw, 1rem);
   user-select: none;

@@ -23,16 +23,16 @@ export default defineComponent({
       document.addEventListener("mousemove", this.onMouseMove);
     },
     onMouseMove(event) {
-      if (!this.blob) {
+      if (!this.blob || event.clientY > window.innerHeight - 150) {
         return;
       }
 
-      const { clientX, clientY } = event;
+      const { pageX, pageY } = event;
 
       this.blob.animate(
         {
-          left: `${clientX}px`,
-          top: `${clientY}px`,
+          left: `${pageX}px`,
+          top: `${pageY}px`,
         },
         {
           duration: 20000,

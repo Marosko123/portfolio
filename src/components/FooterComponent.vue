@@ -22,7 +22,18 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2024 Maroš Bednár. All rights reserved.</p>
+      <div>&copy; 2024 Maroš Bednár</div>
+      <div>IČO: 56256795</div>
+      <div>Pod Vápenicou 727/7, 028 01 Trstená</div>
+      <div>+421 911 670 188</div>
+      <div>
+        <a href="mailto:bednarmaros341@gmail.com" target="_blank">
+          bednarmaros341@gmail.com
+        </a>
+      </div>
+      <div>
+        <a href="https:\\www.itbednar.sk" target="_blank">www.itbednar.sk</a>
+      </div>
     </div>
   </div>
 </template>
@@ -40,8 +51,10 @@ export default defineComponent({
   width: auto;
   background: rgb(0, 3, 9);
   color: #ddd;
-  padding: 40px 20px;
+  padding: 20px 0 0 20px;
   border-top: 1px solid #444;
+  z-index: 5;
+  position: relative;
 }
 
 .footer-container {
@@ -68,9 +81,10 @@ a {
   transition: 0.5s;
   height: 48px;
   width: 48px;
+  text-decoration: none;
 }
 
-a:hover {
+.footer-section a:hover {
   color: #fff;
   scale: 1.2;
   transition: 0.5s;
@@ -84,14 +98,24 @@ a:hover {
   text-align: center;
   margin-top: 20px;
   border-top: 1px solid #444;
-  padding-top: 10px;
   color: #ddd;
-  user-select: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
 }
 
 i,
 img {
   width: 48px;
   height: 48px;
+}
+
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column;
+  }
 }
 </style>
