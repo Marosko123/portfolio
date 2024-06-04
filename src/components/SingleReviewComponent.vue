@@ -1,15 +1,5 @@
 <template>
   <div class="single-review">
-    <!-- <glitching-text
-      :value="value"
-      :static-size="20"
-      :speed-in-ms="1"
-      color="#aeaeae" />
-    <glitching-text
-      :value="name"
-      :static-size="15"
-      :speed-in-ms="50"
-      color="#fff" /> -->
     <p class="review">{{ value }}</p>
     <p class="author">{{ name }}</p>
   </div>

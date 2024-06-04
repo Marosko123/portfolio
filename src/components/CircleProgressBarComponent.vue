@@ -39,10 +39,6 @@ export default defineComponent({
       type: String,
       default: "#adf",
     },
-    fontSize: {
-      type: String,
-      default: "2rem",
-    },
     trackWidth: {
       type: String,
       default: "0.5rem",
@@ -63,14 +59,12 @@ export default defineComponent({
         "--primary": this.color1,
         "--secondary": this.color2,
         "--text-color": this.textColor,
-        "--font-size": this.fontSize,
         "--track-width": this.trackWidth,
       };
     },
     titleStyle() {
       return {
         "--text-color": this.textColor,
-        "--font-size": this.fontSize,
         "--primary": this.color1,
       };
     },
@@ -80,8 +74,6 @@ export default defineComponent({
       this.$refs.progressBar.style.animation = "none";
       void this.$refs.progressBar.offsetHeight;
       this.$refs.progressBar.style.animation = null;
-
-      console.log("reset");
     },
   },
 });
@@ -109,7 +101,6 @@ export default defineComponent({
   --secondary: var(--secondary);
   --size: 150px;
   --text-color: var(--text-color);
-  --font-size: var(--font-size);
   --track-width: var(--track-width);
   animation: progress 3s 0.1s forwards;
   width: var(--size);
@@ -129,6 +120,10 @@ export default defineComponent({
   transition: 0.7s;
   box-shadow: 0 0 10rem 0.1rem var(--primary);
   position: relative;
+  z-index: 5;
+}
+
+[role="progressbar"]:focus {
   z-index: 5;
 }
 
@@ -155,7 +150,7 @@ export default defineComponent({
 [role="progressbar"]::after {
   counter-reset: percentage var(--value);
   content: counter(percentage) "%";
-  font-size: var(--font-size);
+  font-size: var(--fs-circles);
   color: var(--text-color);
   font-weight: bold;
   text-align: center;
@@ -185,7 +180,7 @@ export default defineComponent({
 .title {
   width: 150px;
   text-align: center;
-  font-size: 2rem;
+  font-size: var(--fs-circles);
   user-select: none;
   color: var(--text-color);
   margin-bottom: 5px;

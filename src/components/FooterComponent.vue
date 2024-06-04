@@ -3,20 +3,33 @@
     <div class="footer-section">
       <div class="anchors">
         <a
+          class="external-link"
           href="https://www.doucma.sk/272129-doucovanie-informatika-a-matematika-su-so-mnou-hracka"
           target="_blank">
           <img src="doucma-logo.svg" alt="doucma" style="font-size: 48px" />
         </a>
-        <a href="https://www.instagram.com/bednar.maros/" target="_blank">
+        <a
+          class="external-link"
+          href="https://www.instagram.com/bednar.maros/"
+          target="_blank">
           <i class="fa fa-instagram" style="font-size: 48px" />
         </a>
-        <a href="https://www.linkedin.com/in/marosbednar/" target="_blank">
+        <a
+          class="external-link"
+          href="https://www.linkedin.com/in/marosbednar/"
+          target="_blank">
           <i class="fa fa-linkedin" style="font-size: 48px" />
         </a>
-        <a href="mailto:bednarmaros341@gmail.com" target="_blank">
+        <a
+          class="external-link"
+          href="mailto:bednarmaros341@gmail.com"
+          target="_blank">
           <i class="fa fa-google" style="font-size: 48px" />
         </a>
-        <a href="https://github.com/Marosko123" target="_blank">
+        <a
+          class="external-link"
+          href="https://github.com/Marosko123"
+          target="_blank">
           <i class="fa fa-github" style="font-size: 48px" />
         </a>
       </div>
@@ -64,7 +77,6 @@ export default defineComponent({
 }
 
 .footer-section {
-  margin: 10px;
   text-align: center;
   width: fit-content;
   width: 100%;
@@ -116,6 +128,14 @@ img {
 @media (max-width: 768px) {
   .footer-bottom {
     flex-direction: column;
+  }
+
+  i,
+  img,
+  .external-link {
+    height: 34px;
+    width: 34px;
+    font-size: 34px !important;
   }
 }
 </style>

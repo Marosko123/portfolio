@@ -1,16 +1,13 @@
 <template>
   <div class="skills">
     <div class="title">
-      <glitching-text
-        value="Moje skúsenosti"
-        :static-size="60"
-        :speed-in-ms="10" />
+      <glitching-text value="Moje skúsenosti" size="title" :speed-in-ms="10" />
     </div>
 
     <div class="group">
       <glitching-text
         value="Programovacie jazyky a technológie"
-        :static-size="40"
+        size="600"
         :speed-in-ms="5"
         color="#aeaeae" />
 
@@ -91,7 +88,7 @@
     <div class="group">
       <glitching-text
         value="Frameworky a knižnice"
-        :static-size="40"
+        size="600"
         :speed-in-ms="10"
         color="#aeaeae" />
       <div class="circles">
@@ -200,7 +197,7 @@ export default defineComponent({
   margin-top: 50px;
   margin-bottom: 50px;
   width: 100%;
-  padding: 20px;
+  padding: 20px 0;
   font-size: 2rem;
   color: #fff;
 }

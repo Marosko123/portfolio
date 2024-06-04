@@ -2,18 +2,18 @@
   <div class="introduction-text">
     <glitching-text
       value="Ahoj, volám sa"
-      :static-size="20"
+      size="400"
       :speed-in-ms="30"
       color="#ffecb3" />
-    <glitching-text value="Maroš Bednár." :static-size="60" :speed-in-ms="30" />
+    <glitching-text value="Maroš Bednár." size="title" :speed-in-ms="30" />
     <glitching-text
       value="Tvorím veci na webe."
-      :static-size="60"
+      size="title"
       :speed-in-ms="20"
       color="#f5f0f6" />
     <glitching-text
       value="Som programátor, učiteľ a svoju prácu milujem. Preto ti rád pomôžem zamilovať si ju tiež! Neváhaj a kontaktuj ma ešte dnes."
-      :static-size="15"
+      size="400"
       :speed-in-ms="2"
       :max-width="450"
       color="#aeaeae" />

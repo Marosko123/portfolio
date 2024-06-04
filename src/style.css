@@ -21,6 +21,41 @@
   color: #00010d;
 }
 
+:root {
+  --ff-body: "Kanit", sans-serif;
+  --ff-glitching-text: "Roboto Mono", monospace;
+
+  --clr-title: #e2c044;
+  --clr-text: #f5f0f6;
+  --clr-text-light: #aeaeae;
+
+  --fs-title: clamp(2.5rem, 5vw, 4rem);
+  --fs-600: 2rem;
+  --fs-400: 1rem;
+
+  --fs-circles: 2rem;
+}
+
+@media (min-width: 40em) {
+  :root {
+    --fs-xl: 4rem;
+    --fs-600: 2.5rem;
+    --fs-400: 1.25rem;
+    --fs-circles: 2.5rem;
+  }
+}
+
+@media (max-width: 20em) {
+  :root {
+    --fs-xl: 3rem;
+    --fs-600: 2rem;
+    --fs-400: 1rem;
+    --fs-circles: 1.125rem;
+
+    --fs-title: clamp(2rem, 5vw, 3rem);
+  }
+}
+
 body {
   height: 100%;
   margin: 0;
@@ -33,7 +68,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 
-  font-family: "Kanit", sans-serif;
+  font-family: var(--ff-body);
   font-weight: 400;
   font-style: normal;
 }

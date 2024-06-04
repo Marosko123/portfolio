@@ -10,7 +10,7 @@
           <glitching-text
             icon="👨‍💻"
             value="Pomôžem ti zamestnať sa v IT!"
-            :static-size="25"
+            size="400"
             :speed-in-ms="10"
             color="white"
             :is-title="false" />
@@ -19,7 +19,7 @@
           <glitching-text
             icon="👾"
             value="Naučím ťa programovať!"
-            :static-size="25"
+            size="400"
             :speed-in-ms="10"
             color="white"
             :is-title="false" />
@@ -28,7 +28,7 @@
           <glitching-text
             icon="💻"
             value="Vzdelám ťa v IT!"
-            :static-size="25"
+            size="400"
             :speed-in-ms="10"
             color="white"
             :is-title="false" />
@@ -37,7 +37,7 @@
           <glitching-text
             icon="🕸️"
             value="Webové aplikácie"
-            :static-size="25"
+            size="400"
             :speed-in-ms="10"
             color="white"
             :is-title="false" />
@@ -46,7 +46,7 @@
           <glitching-text
             icon="🔍"
             value="SEO optimalizácia"
-            :static-size="25"
+            size="400"
             :speed-in-ms="10"
             color="white"
             :is-title="false" />
@@ -55,7 +55,7 @@
           <glitching-text
             icon="🛒"
             value="E-shopy"
-            :static-size="25"
+            size="400"
             :speed-in-ms="10"
             color="white"
             :is-title="false" />
@@ -66,27 +66,27 @@
     <div class="text">
       <glitching-text
         value="Ponúkam ti dlhodobú spoluprácu za výhodnú cenu!"
-        :static-size="24"
+        size="400"
         :speed-in-ms="10"
-        :max-width="300"
+        :max-width="220"
         color="#aeaeae" />
       <glitching-text
         value="Kontaktuj ma a dohodneme sa na podmienkach spolupráce!"
-        :static-size="24"
+        size="400"
         :speed-in-ms="10"
-        :max-width="300"
+        :max-width="220"
         color="#aeaeae" />
       <glitching-text
         value="Odporúč ma svojim známym a získaj zľavu na moje služby!"
-        :static-size="24"
+        size="400"
         :speed-in-ms="10"
-        :max-width="300"
+        :max-width="220"
         color="#aeaeae" />
       <glitching-text
         value="Teším sa na našu spoluprácu!"
-        :static-size="24"
+        size="400"
         :speed-in-ms="10"
-        :max-width="300"
+        :max-width="220"
         color="#aeaeae" />
     </div>
   </div>
@@ -115,14 +115,14 @@ export default defineComponent({
 .title {
   margin-top: 50px;
   width: 100%;
-  padding: 20px;
+  padding: 20px 0;
   font-size: 2rem;
   color: #fff;
 }
 
 .list {
   width: 100%;
-  padding: 20px;
+  margin: 0 20px;
   font-size: 1.5rem;
   color: #fff;
   text-align: left;
@@ -143,7 +143,7 @@ export default defineComponent({
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 40px;
-  padding: 20px;
+  padding: 20px 0;
   font-size: 1.5rem;
   color: #fff;
   text-align: left;

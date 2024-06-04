@@ -25,9 +25,9 @@ export default defineComponent({
       type: String,
       required: true,
     },
-    staticSize: {
-      type: Number,
-      default: 0,
+    size: {
+      type: String,
+      default: "title",
     },
     // Speed of glitching in milliseconds
     // Lower value means faster glitching
@@ -95,7 +95,7 @@ export default defineComponent({
     },
     getStyle() {
       return {
-        fontSize: this.staticSize ? `${this.staticSize}px` : "4vh",
+        fontSize: `var(--fs-${this.size})`,
         textTransform: this.isUppercase ? "uppercase" : "none",
         color: this.color,
         maxWidth: this.maxWidth ? `${this.maxWidth}px` : "auto",
@@ -111,9 +111,8 @@ export default defineComponent({
 <style scoped>
 .glitching-text {
   display: flex;
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--ff-glitching-text);
   font-weight: 700;
-  color: gold;
   user-select: none;
   pointer-events: none;
   width: fit-content;

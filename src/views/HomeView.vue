@@ -52,4 +52,16 @@ export default {
 .add-padding {
   padding: 0 50px;
 }
+
+@media (max-width: 768px) {
+  .introduction-text {
+    padding-left: 0;
+    padding-top: 50px;
+    margin-bottom: 100px;
+  }
+
+  .add-padding {
+    padding: 0 20px;
+  }
+}
 </style>

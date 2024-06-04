@@ -3,7 +3,7 @@
     <div class="title">
       <glitching-text
         value="Recenzie zákazníkov"
-        :static-size="60"
+        size="title"
         :speed-in-ms="10" />
     </div>
 
@@ -122,7 +122,7 @@ export default defineComponent({
   margin-top: 50px;
   margin-bottom: 20px;
   width: 100%;
-  padding: 20px;
+  padding: 20px 0;
   font-size: 2rem;
   color: #fff;
 }
