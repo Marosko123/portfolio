@@ -1,39 +1,55 @@
-# portfolio
+# Portfolio Template
 
 This template should help get you started developing with Vue 3 in Vite.
 
-## Recommended IDE Setup
+## Technológie
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- **Vue 3** (komponentový framework pre front-end)
+- **TypeScript** (typovaná nadstavba JavaScriptu)
+- **Tailwind CSS** (CSS framework)
+- **Vue Router** (voliteľný, ak budete chcieť routing)
+- **Vue i18n** (medzinárodná lokalizácia a preklady)
+- **Vite** (na rýchly build a vývojový server)
 
-## Type Support for `.vue` Imports in TS
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## Inštalácia a Spustenie
 
-## Customize configuration
+1. **Klonovanie repozitára**
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+   ```bash
+   git clone https://github.com/Marosko123/portfolio-template.git
+   cd portfolio
+   ```
 
-## Project Setup
+2. **Inštalácia závislostí**
 
-```sh
-npm install
-```
+   ```bash
+    npm install
+    ```
 
-### Compile and Hot-Reload for Development
+3. **Spustenie lokálneho vývoja**
 
-```sh
-npm run dev
-```
+   ```bash
+   npm run dev
+   ```
 
-### Type-Check, Compile and Minify for Production
+4. **Build pre produkciu**
 
-```sh
-npm run build
-```
+   ```bash
+   npm run build
+   ```
+   -  Zložka dist/ bude obsahovať statické súbory pripravené na nasadenie (napr. na GitHub Pages).
 
-### Lint with [ESLint](https://eslint.org/)
+5. **Publishnutie na GH Pages**
 
-```sh
-npm run lint
-```
+   ```bash
+   npm run build
+   npm run preview
+   npm run deploy
+   ```
+
+## Prispievanie a Rozšírenie
+
+Ak máte nápad na vylepšenie tohto template, neváhajte a pridajte nový PR. Rád sa na neho pozriem a prípadne ho mergnem do hlavného repozitára.
+
+Používajte Gitmoji pre lepšiu orientáciu v commitoch. [Zoznam Gitmoji](https://gitmoji.dev/) Pripadne si môžete stiahnuť extenziu pre VSC: [Gitmoji for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=seatonjiang.gitmoji-vscode)
