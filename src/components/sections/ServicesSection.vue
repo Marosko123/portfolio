@@ -1,15 +1,16 @@
 <template>
   <div class="flex flex-col items-center justify-center w-full h-full bg-blue-200">
-    <h2 class="text-3xl font-bold mb-4">Služby</h2>
+    <h2 class="text-3xl font-bold mb-4">{{ t('sections.services.title') }}</h2>
     <p class="max-w-md text-center">
-      Ponúkam individuálne doučovanie z matematiky, prípravu na maturity, vysokú školu,
-      ako aj kurzy programovania (C++, Python, JavaScript).
+      {{ t('sections.services.description') }}
     </p>
   </div>
 </template>
 
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

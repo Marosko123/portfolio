@@ -13,13 +13,11 @@
       <ContactSection />
     </div>
 
-    <!-- PortfolioSection je tiež samostatný komponent, ale s iným obsahom -->
     <div class="scroll-area" data-section="portfolio">
       <PortfolioSection />
     </div>
   </div>
 
-  <!-- Tlačidlo Scroll to top (zobrazí sa len, ak nie sme úplne hore) -->
   <button v-if="!isAtTop" class="fixed bottom-4 right-4 btn" @click="scrollToTop">
     Scroll to top
   </button>
@@ -129,40 +127,30 @@ function scrollToSectionFromHash() {
 <style scoped>
 /* Kontajner so scroll-snap nastavením (vertikálne) */
 .scroll-container {
-  height: calc(100vh - 120px);
-  /* Výška okna - výška Navbaru */
+  height: calc(100vh - 128px);
   overflow-y: auto;
 
   scroll-behavior: smooth;
-  /* Plynulé scrollovanie */
   scroll-snap-type: y mandatory;
-  /* Snap na najbližšiu sekciu */
   -webkit-scroll-snap-type: y mandatory;
   -ms-scroll-snap-type: y mandatory;
 }
 
 /* Každá sekcia */
 .scroll-area {
-  height: 100vh;
-  /* Zaberá celú výšku okna */
+  height: 100%;
   scroll-snap-align: start;
-  /* Snap je na hornú hranu sekcie */
 }
 
-/* Jednoduchá definícia tlačidla */
 .btn {
   padding: 0.75rem 1rem;
   background-color: #2563eb;
-  /* bg-blue-600 */
   color: #ffffff;
-  /* text-white */
   border-radius: 0.375rem;
-  /* rounded */
   transition: background-color 0.2s;
 }
 
 .btn:hover {
   background-color: #1d4ed8;
-  /* hover:bg-blue-700 */
 }
 </style>

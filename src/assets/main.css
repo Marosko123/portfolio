@@ -8,7 +8,7 @@ html {
 
 #app {
   font-weight: normal;
-  height: calc(100vh - 120px);
+  color: goldenrod;
 }
 
 a,
